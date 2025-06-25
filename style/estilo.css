@@ -1,6 +1,6 @@
 .form1{
-    background-color: gray;
-    font-size: 50px;
+    background-color: transparent;
+    font-size: 40px;
     margin-left: 20px;
     align-content: center;
 }
@@ -8,12 +8,74 @@
     padding-top: 30px;
 }
 .boton1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: right;
+    font-size: 16px;
+    background-color: #cdc6c6;
 }
 .aside{
     text-align: right;
 }
 .img1{
-    width: 150px; height: 35px ;
+    width: 100px; height: 25px ;
+}
+.img2{
+    width: 30px; height: 30px;
+}
+.href{
+    font-family: 'Times New Roman', Times, serif;
+    color: #ea2e2e;
+    text-decoration: none;
+}
+.href1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ea2e2e;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: right;
+}
+.parf{
+    color: white;
+    font-size: 14px;
+}
+.login-box {
+      width: 300px;
+      margin: 100px auto;
+      padding: 30px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+.piepagina{
+    background-color: black;
+    color: white;
+}
+.imgzoom {
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+.imgzoom:hover {
+    transform: scale(1.1);
+}
+.nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background-color: #1e1e2f;
+    }
+
+.nav-bar a img {
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.nav-bar a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 

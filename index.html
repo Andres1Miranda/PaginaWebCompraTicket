@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>COMPRA DE TICKETS</title>
+    <title>CO-MUSICA|COMPRA DE TICKETS</title>
     <link rel="stylesheet" href="style/estilo.css">
 </head>
 <body>
@@ -10,24 +10,24 @@
         body {
             background-image: url("src/background_concierto.jpg");
             background-size: 100%; /* ajusta la imagen para cubrir toda la pantalla */
-            background-position: center; /* centra la imagen */
             background-repeat: no-repeat; /* evita que se repita */
         }
     </style>
     <header class="header">
-        <div>
-            <form class="form1">
-                <a href="#"><img src="src/LOGO.png" class="img1"></a>
-                <label>NOTICIAS</label>
-                <label>CLIPS</label>
-                <label>NOSOTROS</label>
-                <button class="boton1">hola</button>
-            </form>
-        </div>
+        <form class="form1" action="compra.html" method="get">
+            <a href="#" class="href"><img src="src/LOGO.png" class="img1"></a>
+            <a href="noticias.html" class="href"><label>NOTICIAS</label></a>
+            <a href="clips.html" class="href"><label>CLIPS</label></a>
+            <a href="nosotros.html" class="href"><label>NOSOTROS</label></a>
+            <a href="registro.html" class="href1"><label>Registrarse /</label></a>
+            <input type="text" placeholder="Usuario" required />
+            <input type="password" placeholder="Contraseña" required />
+            <input type="submit" value="Entrar"/>
+        </form>
     </header>
-    <br>
-    <section class="seccion">
-        <p>Lorem ipsum dolor sit amet consectetur<br>
+    <br><br>
+    <section>
+        <p class="parf">Lorem ipsum dolor sit amet consectetur<br>
         adipisicing elit. Dignissimos asperiores<br>
         pariatur neque suscipit totam iure quidem.<br>
         Deleniti, nobis ut illo atque quo reiciendis<br>
@@ -35,11 +35,14 @@
         alias?</p>
     </section>
     <aside class="aside">
-        <label>redes</label>
+        <label class="parf">SIGUENOS!</label><br>
+        <a href="https://www.facebook.com/"><img src="src/facebook_ico.png" class="img2"></a><br>
+        <a href="https://www.instagram.com/"><img src="src/instagran_ico.png" class="img2"></a><br>
+        <a href="https://www.x.com/"><img src="src/twitterx.png" class="img2"></a><br>
     </aside>
-    <footer>
-
+    <footer class="piepagina">
+        <label>Preguntas Frecuentes</label><br>
+        <label>Sobre Nosotros</label>
     </footer>
-
 </body>
 </html>
