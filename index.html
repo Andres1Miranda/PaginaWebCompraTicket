@@ -14,14 +14,14 @@
         }
     </style>
     <header class="header">
-        <form class="form1" action="compra.html" method="get">
+        <form class="form1" action="conexionPHP/validar.php" method="post">
             <a href="#" class="href"><img src="src/LOGO.png" class="img1"></a>
             <a href="noticias.html" class="href"><label>NOTICIAS</label></a>
             <a href="clips.html" class="href"><label>CLIPS</label></a>
             <a href="nosotros.html" class="href"><label>NOSOTROS</label></a>
             <a href="registro.html" class="href1"><label>Registrarse /</label></a>
-            <input type="text" placeholder="Usuario" required />
-            <input type="password" placeholder="Contraseña" required />
+            <input type="text" name="usuario" placeholder="Usuario" required />
+            <input type="password" name="clave" placeholder="Contraseña" required />
             <input type="submit" value="Entrar"/>
         </form>
     </header>
