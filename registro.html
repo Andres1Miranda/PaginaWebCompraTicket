@@ -3,52 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CO-MUSICA | REGISTRO USUARIO</title>
 </head>
 <body>
     <div class="content">
             <!-- Formulario para crear usuario -->
             <div class="form-section">
-                <h2>➕ Crear Nuevo Usuario</h2>
+                <h2>Crear Nuevo Usuario</h2>
                 <form id="usuarioForm">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="edad">Edad:</label>
-                        <input type="number" id="edad" name="edad" min="1" max="120">
+                        <label for="email">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
                     </div>
                     <button type="submit" class="btn">Crear Usuario</button>
                 </form>
             </div>
     </div>
-    <!-- Controles -->
-            <div class="form-section">
-                <h2>🛠️ Controles</h2>
-                <button onclick="cargarUsuarios()" class="btn">Cargar Usuarios</button>
-                <button onclick="testApi()" class="btn btn-warning">Test API</button>
-            </div>
-
-            <!-- Mensajes -->
-            <div id="mensajes"></div>
-
-            <!-- Lista de usuarios -->
-            <div class="usuarios-section">
-                <h2>👥 Lista de Usuarios</h2>
-                <div id="usuariosContainer">
-                    <div class="loading">Haz clic en "Cargar Usuarios" para ver los datos</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script>
-        const API_BASE_URL = 'http://localhost:3000/api';
+        const API_BASE_URL = 'https://databaseweb-c3716-default-rtdb.firebaseio.com/';
 
         // Función para mostrar mensajes
         function mostrarMensaje(mensaje, tipo = 'success') {
@@ -70,8 +47,7 @@
             const formData = new FormData(e.target);
             const usuario = {
                 nombre: formData.get('nombre'),
-                email: formData.get('email'),
-                edad: formData.get('edad') ? parseInt(formData.get('edad')) : null
+                email: formData.get('password'),
             };
 
             try {
@@ -98,7 +74,7 @@
         });
 
         // Función para cargar usuarios
-        async function cargarUsuarios() {
+       /* async function cargarUsuarios() {
             const container = document.getElementById('usuariosContainer');
             container.innerHTML = '<div class="loading">Cargando usuarios...</div>';
 
@@ -123,7 +99,7 @@
             } catch (error) {
                 container.innerHTML = `<div class="error">Error de conexión: ${error.message}</div>`;
             }
-        }
+        }*/
 
         // Función para crear card de usuario
         function crearUsuarioCard(usuario) {

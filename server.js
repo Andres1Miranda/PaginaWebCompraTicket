@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const { initializeApp } = require('firebase/app');
+import { initializeApp } from "firebase/app";
 const { 
   getFirestore, 
   collection, 
@@ -23,12 +24,12 @@ app.use(express.static('public')); // Para servir archivos HTML estáticos
 
 // Configuración de Firebase
 const firebaseConfig = {
-  apiKey: "tu-api-key",
-  authDomain: "tu-proyecto.firebaseapp.com",
-  projectId: "tu-proyecto-id",
-  storageBucket: "tu-proyecto.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "tu-app-id"
+  apiKey: "AIzaSyAtucAmdV_7UO84OHeK2jKSyW0VqXohUFA", // Tu API Key
+  authDomain: "databaseweb-c3716.firebaseapp.com", // Tu Auth Domain
+  projectId: "databaseweb-c3716", // Tu Project ID
+  storageBucket: "databaseweb-c3716.firebasestorage.app", // Tu Storage Bucket
+  messagingSenderId: "822232922799", // Tu Messaging Sender ID
+  appId: "1:822232922799:web:67f5ce0f8a332bbe25325a"// Tu App ID
 };
 
 // Inicializar Firebase

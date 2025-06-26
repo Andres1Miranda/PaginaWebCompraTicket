@@ -1,19 +1,20 @@
 // firebase-config.js
 // Este archivo contiene la configuración de Firebase
 // Reemplaza estos valores con los de tu proyecto Firebase
-
+import { initializeApp } from "firebase/app";
 const firebaseConfig = {
   // Obtén estos valores desde la consola de Firebase
   // https://console.firebase.google.com/ -> Configuración del proyecto -> General
   
-  apiKey: "AIzaSyC1234567890abcdefghijklmnopqrstuvwxyz", // Tu API Key
-  authDomain: "tu-proyecto.firebaseapp.com", // Tu Auth Domain
-  projectId: "tu-proyecto-id", // Tu Project ID
-  storageBucket: "tu-proyecto.appspot.com", // Tu Storage Bucket
-  messagingSenderId: "123456789012", // Tu Messaging Sender ID
-  appId: "1:123456789012:web:abcdef1234567890abcdef" // Tu App ID
+  apiKey: "AIzaSyAtucAmdV_7UO84OHeK2jKSyW0VqXohUFA", // Tu API Key
+  authDomain: "databaseweb-c3716.firebaseapp.com", // Tu Auth Domain
+  projectId: "databaseweb-c3716", // Tu Project ID
+  storageBucket: "databaseweb-c3716.firebasestorage.app", // Tu Storage Bucket
+  messagingSenderId: "822232922799", // Tu Messaging Sender ID
+  appId: "1:822232922799:web:67f5ce0f8a332bbe25325a"// Tu App ID
 };
 
+const app=initializeApp(firebaseConfig);
 module.exports = firebaseConfig;
 
 /* 
