@@ -2,53 +2,44 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>CO-MUSICA|COMPRA DE TICKETS</title>
+    <title>CO-MUSICA|INICIO</title>
     <link rel="stylesheet" href="style/estilo.css">
 </head>
 <body>
     <style>
         body {
             background-image: url("src/background_concierto.jpg");
-            background-size: 100%; /* ajusta la imagen para cubrir toda la pantalla */
+            background-size: 120%; /* ajusta la imagen para cubrir toda la pantalla */
             background-repeat: no-repeat; /* evita que se repita */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
     </style>
-    <header class="header">
-        <form class="form1" action="compra.html" method="get">
-            <a href="#" class="href"><img src="src/LOGO.png" class="img1"></a>
-            <a href="noticias.html" class="href"><label>NOTICIAS</label></a>
-            <a href="clips.html" class="href"><label>CLIPS</label></a>
-            <a href="nosotros.html" class="href"><label>NOSOTROS</label></a>
-            <a href="registro.html" class="href1"><label>Registrarse /</label></a>
-            <input type="text" name="usuario" placeholder="Usuario" required />
-            <input type="password" name="clave" placeholder="Contraseña" required />
-            <input type="submit" value="Entrar"/>
-        </form>
-    </header>
-    <br><br>
-    <section>
-        <p class="parf">Lorem ipsum dolor sit amet consectetur<br>
-        adipisicing elit. Dignissimos asperiores<br>
-        pariatur neque suscipit totam iure quidem.<br>
-        Deleniti, nobis ut illo atque quo reiciendis<br>
-        voluptas rerum eum sunt. Doloribus, minima<br>
-        alias?</p>
-        <div class="nav-bar">
-            <a href=""><img src="src/billie.webp" class="imgzoom"></a>
-            <a href=""><img src="src/bts.jpeg" class="imgzoom"></a>
-            <a href=""><img src="src/ladygaga.jpg" class="imgzoom"></a>
-            <a href=""><img src="src/Shakira.webp" class="imgzoom"></a>
+    <header class="cabezera">
+        <div class="cab_nav">
+            <img src="src/LOGO.png" alt="Logo" class="logo_img">
+            <ul style="display: flex; justify-content: flex-end; padding: 0px 1250px;">
+                <li><a href="Informacion.php">Informacion</a></li>
+                <li><a href="compra.php"></a></li>
+                <li><a href="acceder.php">Entrar</a></li>
+                <li><a href="registrar.php">Registrarse</a></li>
+            </ul>
         </div>
-    </section>
-    <aside class="aside">
-        <label class="parf">SIGUENOS!</label><br>
-        <a href="https://www.facebook.com/"><img src="src/facebook_ico.png" class="img2"></a><br>
-        <a href="https://www.instagram.com/"><img src="src/instagran_ico.png" class="img2"></a><br>
-        <a href="https://www.x.com/"><img src="src/twitterx.png" class="img2"></a><br>
-    </aside>
-    <footer class="piepagina">
-        <label>Preguntas Frecuentes</label><br>
-        <label>Sobre Nosotros</label>
+    </header>
+    <div class="contenedor">
+        <h2 class="titulo_cont">TICKETS DE TU CONCIERTO FAVORITO</h2>
+        <p class="parr_cont">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste voluptates ipsam, quaerat quisquam illum numquam, nemo ducimus asperiores eligendi suscipit sapiente neque tempore odio quibusdam voluptas quam quidem eum officia.</p>
+    </div>
+    <div class="nav-bar">
+        <img src="src/billie.webp" class="imgzoom">
+        <img src="src/bts.jpeg" class="imgzoom">
+        <img src="src/ladygaga.jpg" class="imgzoom">
+        <img src="src/Shakira.webp" class="imgzoom">
+    </div>
+    <footer style="text-align: center; padding: 20px; background-color: #222; color: white; margin-top: 900px;">
+        © 2025 CO-MUSICA. Todos los derechos reservados.<br>
+        Pagina hecha por A.Miranda - J.Pallo
     </footer>
 </body>
 </html>
