@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>CO-MUSICA|INICIO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO-MUSICA | INGRESO</title>
     <link rel="stylesheet" href="style/estilo.css">
 </head>
 <body>
@@ -22,18 +23,22 @@
             <ul style="display: flex; justify-content: flex-end; padding: 0px 1250px;">
                 <li><a href="informacion.html">Informacion</a></li>
                 <li><a href="compra.html"></a></li>
-                <li><a href="acceso.html">Entrar</a></li>
+                <li><a href="acceso.html"></a></li>
                 <li><a href="registrar.html">Registrarse</a></li>
             </ul>
         </div>
     </header>
-    <div class="contenedor">
-        <h2 class="titulo_cont">TICKETS DE TU CONCIERTO FAVORITO</h2>
-        <p class="parr_cont">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste voluptates ipsam, quaerat quisquam illum numquam, nemo ducimus asperiores eligendi suscipit sapiente neque tempore odio quibusdam voluptas quam quidem eum officia.</p>
-    </div>
-    <footer style="text-align: center; padding: 20px; background-color: #222; color: white; margin-top: 900px;">
+    <form class="formulario_ing1" action=" " method="POST" id="acc_form">
+        <h2 class="info_h2">Ingresar</h2>
+        <input type="text" class="formula" required placeholder="Usuario" name="usuario1">
+        <input type="password" class="formula" required placeholder="Contraseña" name="pass1">
+        <input type="submit" value="Ingresar" class="enviar">
+    </form>
+    
+    <footer style="text-align: center; padding: 20px; background-color: #222; color: white; margin-top: auto;">
         © 2025 CO-MUSICA. Todos los derechos reservados.<br>
         Pagina hecha por A.Miranda - J.Pallo
     </footer>
+
 </body>
 </html>
