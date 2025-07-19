@@ -1,2 +1,2 @@
 # PaginaWebCompraTicket
-# librerias usadas express, firebase, cors, nodemon
+# librerias usadas express, firebase, cors, nodejs

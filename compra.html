@@ -21,27 +21,35 @@
         <div class="cab_nav">
             <img src="src/LOGO.png" alt="Logo" class="logo_img">
             <ul style="display: flex; justify-content: flex-end; padding: 0px 1250px;">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="informacion.html">Informacion</a></li>
-                <li><a href="index.html">Salir</a></li>
             </ul>
         </div>
     </header>
     <form class="formulario_ing" action=" " method="POST">
             <h2 class="info_h2">COMPRAR TICKET DE EVENTO</h2>
-            <input class="formula" type="text" required placeholder="Cedula" name="cedula">
-            <input class="formula" type="text" required placeholder="Nombres" name="nombre">
-            <input class="formula" type="text" required placeholder="Apellidos" name="apellido">
-            <input class="formula" type="email" required placeholder="Correo electronico" name="correo">
-            <input class="formula" type="text" required placeholder="Telefono" name="telefono">
-            <input class="formula" type="text" required placeholder="Numero de tarjeta" name="tarjeta">
-            <input class="formula" type="number" require placeholder="Cantidad de tickets" name="cant">
-            <input type="text" placeholder="evento" require disabled class="formula1">
-            <input class="formula" type="number" required placeholder="Cantidad de ticket a comprar" class="">
-            <input class="enviar" type="submit" value="COMPRAR"><br>
+            <div id="mensaje" class="mensaje" style ="display:none;"></div>
+
+            <input class="formula" type="text" required placeholder="Cedula" name="cedula" id="cedula">
+            <input class="formula" type="text" required placeholder="Nombres" name="nombre" id="nombre">
+            <input class="formula" type="text" required placeholder="Apellidos" name="apellido" id="apellido">
+            <input class="formula" type="email" required placeholder="Correo electronico" name="correo" id="apellido">
+            <input class="formula" type="text" required placeholder="Telefono" name="telefono" id="telefono">
+            <input class="formula" type="text" required placeholder="Numero de tarjeta" name="tarjeta" id="tarjeta">
+            <select class="formula" name="evento" id="evento" required>
+                <option value="">Selecciona un evento</option>
+                <option value="Rock en Río 2025">Rock en Río 2025 - $75.00</option>
+                <option value="Pop Festival">Pop Festival - $50.00</option>
+                <option value="Jazz Night">Jazz Night - $40.00</option>
+                <option value="Electronic Music Fest">Electronic Music Fest - $60.00</option>
+            </select>
+            <input class="formula" type="number" require placeholder="Cantidad de tickets" name="cant" id="cantidad">
+            <input class="formula1" type="text" placeholder="Precio total: $0.00" id="precioTotal" disabled>
+            <input class="enviar" type="submit" value="COMPRAR" id="btnComprar"><br>
     </form>
     <footer style="text-align: center; padding: 20px; background-color: #222; color: white; margin-top: auto;">
         © 2025 CO-MUSICA. Todos los derechos reservados.<br>
         Pagina hecha por A.Miranda - J.Pallo -S.Pullutagsi
     </footer>
-</body>
+    <script src="js/compra.js"></script>
 </html>
