@@ -34,8 +34,9 @@ module.exports ={
         let telefono = req.body.telefono
         let tarjeta = req.body.tarjeta
         let cantidad = req.body.cantidad
+        let precio = req.body.precio
 
-        clienteModels.postCliente(cedula,nombre,apellido,correo,telefono,tarjeta,cantidad,function(err,result){
+        clienteModels.postCliente(cedula,nombre,apellido,correo,telefono,tarjeta,cantidad,precio,function(err,result){
             if(err){
                 res.status(500).json({error:err.message});
                 return;

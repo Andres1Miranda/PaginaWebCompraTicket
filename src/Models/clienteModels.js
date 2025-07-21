@@ -11,8 +11,8 @@ class cliente {
         db.query(sql,(id),callback)
     }
 
-    postCliente(cedula,nombre,apellido,correo,telefono,tarjeta,cantidad){
-        let sql = "INSERT INTO clientes(cedula,nombre,apellido,correo,telefono,tarjeta,cantidad) VALUES (?,?,?,?,?,?,?"
+    postCliente(cedula,nombre,apellido,correo,telefono,tarjeta,cantidad,precio){
+        let sql = "INSERT INTO clientes(cedula,nombre,apellido,correo,telefono,tarjeta,cantidad,precio) VALUES (?,?,?,?,?,?,?,?"
         scrollBy.query(sql,[cedula,nombre,apellido,correo,telefono,tarjeta,cantidad],function(err,result){
             if(err){
                 return callback(err,null)
