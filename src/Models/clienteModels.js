@@ -26,3 +26,5 @@ class cliente {
         db.query(sql,(id),callback)
     }
 }
+
+module.exports = new cliente()
