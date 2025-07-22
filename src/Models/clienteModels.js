@@ -13,7 +13,7 @@ class cliente {
 
     postCliente(cedula,nombre,apellido,correo,telefono,tarjeta,cantidad,precio){
         let sql = "INSERT INTO clientes(cedula,nombre,apellido,correo,telefono,tarjeta,cantidad,precio) VALUES (?,?,?,?,?,?,?,?"
-        scrollBy.query(sql,[cedula,nombre,apellido,correo,telefono,tarjeta,cantidad],function(err,result){
+        db.query(sql,[cedula,nombre,apellido,correo,telefono,tarjeta,cantidad],function(err,result){
             if(err){
                 return callback(err,null)
             }
