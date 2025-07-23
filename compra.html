@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CO-MUSICA | COMPRA TICKET</title>
-    <link rel="stylesheet" href="style/estilo.css">
+    <link rel="stylesheet" href="/style/estilo.css">
 </head>
 <body>
     <style>
         body {
-            background-image: url("src/background_concierto.jpg");
+            background-image: url("src/img/background_concierto.jpg");
             background-size: 120%; /* ajusta la imagen para cubrir toda la pantalla */
             background-repeat: no-repeat; /* evita que se repita */
             min-height: 100vh;
@@ -19,14 +19,14 @@
     </style>
     <header class="cabezera">
         <div class="cab_nav">
-            <img src="src/LOGO.png" alt="Logo" class="logo_img">
+            <img src="src/img/LOGO.png" alt="Logo" class="logo_img">
             <ul style="display: flex; justify-content: flex-end; padding: 0px 1250px;">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="informacion.html">Informacion</a></li>
             </ul>
         </div>
     </header>
-    <form class="formulario_ing" method="POST" id="formularioCompra">
+    <form class="formulario_ing" method="POST" id="formularioCompra" action="/compra">
             <h2 class="info_h2">COMPRAR TICKET DE EVENTO</h2>
             <input class="formula" type="text" required placeholder="Cedula" name="cedula" id="cedula">
             <input class="formula" type="text" required placeholder="Nombres" name="nombre" id="nombre">
@@ -41,7 +41,7 @@
                 <option value="Jazz Night">Jazz Night - $40.00</option>
                 <option value="Electronic Music Fest">Electronic Music Fest - $60.00</option>
             </select>
-            <input class="formula" type="number" require placeholder="Cantidad de tickets" name="cant" id="cantidad">
+            <input class="formula" type="number" require placeholder="Cantidad de tickets" name="cant" id="cantidad" min="1">
             <input class="formula1" type="text" placeholder="Precio total: $0.00" id="precioTotal" disabled>
             <input class="enviar" type="submit" value="COMPRAR" id="btnComprar"><br>
     </form>
@@ -49,5 +49,31 @@
         © 2025 CO-MUSICA. Todos los derechos reservados.<br>
         Pagina hecha por A.Miranda - J.Pallo -S.Pullutagsi
     </footer>
-    <script src="js/compra.js"></script>
+    <script>
+        const eventoSelect = document.getElementById('evento');
+        const cantidadInput = document.getElementById('cantidad');
+        const precioTotalInput = document.getElementById('precioTotal');
+        
+        const precios = {
+            "Rock en Río 2025": 75.00,
+            "Pop Festival": 50.00,
+            "Jazz Night": 40.00,
+            "Electronic Music Fest": 60.00
+        };
+        
+        function calcularPrecioTotal() {
+            const eventoSeleccionado = eventoSelect.value;
+            const cantidad = parseInt(cantidadInput.value) || 0;
+    
+            if (eventoSeleccionado && cantidad > 0) {
+                const precioUnitario = precios[eventoSeleccionado];
+                const total = precioUnitario * cantidad;
+                precioTotalInput.value = `Precio total: $${total.toFixed(2)}`;
+            } else {
+                precioTotalInput.value = 'Precio total: $0.00';
+            }
+        }
+        eventoSelect.addEventListener('change', calcularPrecioTotal);
+        cantidadInput.addEventListener('input', calcularPrecioTotal);
+    </script>
 </html>
