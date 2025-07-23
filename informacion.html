@@ -138,12 +138,10 @@
       data-video="https://www.youtube.com/embed/VIDEO_ID_BILLIE?autoplay=1"
       alt="Billie Eilish"
     />
-    <img
+    <a href ="https://www.youtube.com/watch?v=wbCv7U_Cf7U&list=RDwbCv7U_Cf7U&start_radio=1"><img
       src="src/img/bts.jpeg"
       class="imgzoom video-trigger"
-      data-video="https://www.youtube.com/embed/VIDEO_ID_BTS?autoplay=1"
-      alt="BTS"
-    />
+    /></a>
     <img
       src="src/img/ladygaga.jpg"
       class="imgzoom video-trigger"
@@ -176,26 +174,6 @@
     Página hecha por A.Miranda - J.Pallo - S. Pullutagsi
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const modal = document.getElementById("modal-video");
-      const iframe = document.getElementById("video-iframe");
-      const closeBtn = document.querySelector(".close-btn");
-      document.querySelectorAll(".video-trigger").forEach((img) => {
-        img.addEventListener("click", () => {
-          iframe.src = img.dataset.video;
-          modal.style.display = "flex";
-        });
-      });
-      closeBtn.addEventListener("click", closeModal);
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) closeModal();
-      });
-      function closeModal() {
-        iframe.src = "";
-        modal.style.display = "none";
-      }
-    });
-  </script>
+  
 </body>
 </html>
