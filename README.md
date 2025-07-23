@@ -1,2 +1,2 @@
 # PaginaWebCompraTicket
-# librerias usadas express, nodejs, mysql, ejs
+# librerias usadas express, nodejs, mysql
