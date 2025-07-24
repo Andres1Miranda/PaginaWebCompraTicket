@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CO-MUSICA | INFORMACIÓN</title>
-  <link rel="stylesheet" href="/style/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO-MUSICA|INFORMACION</title>
+    <link rel="stylesheet" href="style/estilo.css">
 </head>
 <body>
-  <style>
+    <style>
         body {
             background-image: url("src/img/background_concierto.jpg");
             background-size: 120%; /* ajusta la imagen para cubrir toda la pantalla */
@@ -17,50 +17,44 @@
             flex-direction: column;
         }
     </style>
-  <header class="cabezera">
-    <img src="src/img/LOGO.png" alt="Logo" class="logo_img" />
-    <ul>
-      <li><a href="/index.html">Inicio</a></li>
-      <li><a href="/compra.html">Comprar boletos</a></li>
-    </ul>
-  </header>
+    <header class="cabezera">
+        <div class="cab_nav">
+            <img src="src/img/LOGO.png" alt="Logo" class="logo_img">
+            <ul style="display: flex; justify-content: flex-end; padding: 0px 1200px;">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/compra.html">Comprar boletos</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="contenedor">
+        <h2 class="titulo_cont">TICKETS DE TU CONCIERTO FAVORITO</h2>
+        <p class="parr_cont">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste voluptates ipsam, quaerat quisquam illum numquam, nemo ducimus asperiores eligendi suscipit sapiente neque tempore odio quibusdam voluptas quam quidem eum officia.</p>
+    </div>
+    <div class="nav-bar">
+        <a href=""><img src="src/img/billie.webp" class="imgzoom"></a>
+        <div id="cnt- cover-video">
+            <div id="cnt-video">
+            <video src="css/video.mp4" controls load id="video"></video>
 
-  <div class="contenedor">
-    <h2 class="titulo_cont">TICKETS DE TU CONCIERTO FAVORITO</h2>
-    <p class="parr_cont">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste voluptates ipsam,
-      quaerat quisquam illum numquam, nemo ducimus asperiores eligendi suscipit sapiente
-      neque tempore odio quibusdam voluptas quam quidem eum officia.
-    </p>
-  </div>
+        </div>
+        <img src="src/img/bts.jpeg" class="imgzoom">
+    <div id="cnt- cover-video">
+    <div id="cnt-video">
+        <video src="css/video.mp4" controls load id="video"></video>
+        <div>
+        <img src="src/img/ladygaga.jpg" class="imgzoom">
+        <img src="src/img/Shakira.webp" class="imgzoom">
+    </div>
 
-  <div class="nav-bar">
-    <a href ="https://www.youtube.com/watch?v=V9PVRfjEBTI&list=RDV9PVRfjEBTI&start_radio=1"><img 
-        src="/src/img/billie.webp"
-      class="imgzoom"
-    ></a>
+    <div class="modal-video" id="modal-video">
+        
+    </div>
 
-    <a href ="https://www.youtube.com/watch?v=gdZLi9oWNZg&list=RDgdZLi9oWNZg&start_radio=1"><img
-      src="src/img/bts.jpeg"
-      class="imgzoom"
-    ></a>
+    <footer style="text-align: center; padding: 20px; background-color: #222; color: white; margin-top: 900px;">
+        © 2025 CO-MUSICA. Todos los derechos reservados.<br>
+        Pagina hecha por A.Miranda - J.Pallo - S. Pullutagsi
+    </footer>
 
-    <a href="https://www.youtube.com/watch?v=bESGLojNYSo&list=RDEMp7_432lokhimq4eaoILwZA&start_radio=1"><img
-      src="src/img/ladygaga.jpg"
-      class="imgzoom"
-    ></a>
-
-    <a href="https://www.youtube.com/watch?v=oBofuVYDoG4&list=RDEM4s6ouTwHMSllkl-X-LBTQQ&start_radio=1"><img
-      src="src/img/Shakira.webp"
-      class="imgzoom"
-    ></a>
-  </div>
-
-  <footer>
-    © 2025 CO‑MUSICA. Todos los derechos reservados.<br />
-    Página hecha por A.Miranda - J.Pallo - S. Pullutagsi
-  </footer>
-
-  
+    <script src="../src/public/javascript/informacion.js"></script>
 </body>
 </html>
