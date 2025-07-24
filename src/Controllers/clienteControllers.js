@@ -2,7 +2,7 @@ const clienteModels = require("../Models/clienteModels");
 
 module.exports ={
     getCliente:function(req,res){
-        clientModels.getCliente((err,result)=>{
+        clienteModels.getCliente((err,result)=>{
             if(err){
                 res.status(500).json({error:err.message});
                 return;
@@ -22,7 +22,7 @@ module.exports ={
                 res.status(404).json=({message:"Registro no encontrado"});
                 return;
             }
-            res.status(200).json({data:{result}})
+            res.status(200).json({data:result})
         })
     },
 
@@ -41,7 +41,10 @@ module.exports ={
                 res.status(500).json({error:err.message});
                 return;
             }
-            res.status(200).json({message:"Registo ingresado correctamente"})
+            console.log("Cliente guardado correctamente")
+            //res.status(200).json({message:"Registo ingresado correctamente"})
+            res.redirect("/index.html")
+            
         })
     },
 

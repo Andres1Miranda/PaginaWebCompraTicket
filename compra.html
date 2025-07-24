@@ -41,8 +41,8 @@
                 <option value="Jazz Night">Jazz Night - $40.00</option>
                 <option value="Electronic Music Fest">Electronic Music Fest - $60.00</option>
             </select>
-            <input class="formula" type="number" require placeholder="Cantidad de tickets" name="cant" id="cantidad" min="1">
-            <input class="formula1" type="text" placeholder="Precio total: $0.00" id="precioTotal" disabled>
+            <input class="formula" type="number" require placeholder="Cantidad de tickets" name="cantidad" id="cantidad" min="1">
+            <input class="formula1" placeholder="Precio total: $0.00" id="precio" name="precio" >
             <input class="enviar" type="submit" value="COMPRAR" id="btnComprar"><br>
     </form>
     <footer style="text-align: center; padding: 20px; background-color: #222; color: white; margin-top: auto;">
@@ -52,7 +52,7 @@
     <script>
         const eventoSelect = document.getElementById('evento');
         const cantidadInput = document.getElementById('cantidad');
-        const precioTotalInput = document.getElementById('precioTotal');
+        const precioTotalInput = document.getElementById('precio');
         
         const precios = {
             "Rock en Río 2025": 75.00,
