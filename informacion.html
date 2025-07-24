@@ -1,60 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CO-MUSICA|INFORMACION</title>
-    <link rel="stylesheet" href="style/estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CO‑MUSICA | INFORMACIÓN</title>
+  <style>
+    body {
+      background-image: url("src/img/background_concierto.jpg");
+      background-size: 120%;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+    .cabezera {
+      background: rgba(0,0,0,0.6);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo_img {
+      height: 50px;
+    }
+    .cabezera ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    .cabezera a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contenedor {
+      text-align: center;
+      margin: 30px;
+      color: white;
+    }
+    .titulo_cont {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .parr_cont {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: auto;
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    .imgzoom {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      border: 3px solid transparent;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .imgzoom:hover {
+      transform: scale(1.05);
+      border-color: white;
+    }
+    .modal-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .modal-content {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      aspect-ratio: 16/9;
+    }
+    .modal-content iframe {
+      width: 100%;
+      height: 100%;
+    }
+    .close-btn {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 30px;
+      color: white;
+      background: rgba(0,0,0,0.6);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      margin-top: auto;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        body {
-            background-image: url("src/img/background_concierto.jpg");
-            background-size: 120%; /* ajusta la imagen para cubrir toda la pantalla */
-            background-repeat: no-repeat; /* evita que se repita */
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
-    <header class="cabezera">
-        <div class="cab_nav">
-            <img src="src/img/LOGO.png" alt="Logo" class="logo_img">
-            <ul style="display: flex; justify-content: flex-end; padding: 0px 1200px;">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/compra.html">Comprar boletos</a></li>
-            </ul>
-        </div>
-    </header>
-    <div class="contenedor">
-        <h2 class="titulo_cont">TICKETS DE TU CONCIERTO FAVORITO</h2>
-        <p class="parr_cont">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste voluptates ipsam, quaerat quisquam illum numquam, nemo ducimus asperiores eligendi suscipit sapiente neque tempore odio quibusdam voluptas quam quidem eum officia.</p>
+
+  <header class="cabezera">
+    <img src="src/img/LOGO.png" alt="Logo" class="logo_img" />
+    <ul>
+      <li><a href="/index.html">Inicio</a></li>
+      <li><a href="/compra.html">Comprar boletos</a></li>
+    </ul>
+  </header>
+
+  <div class="contenedor">
+    <h2 class="titulo_cont">TICKETS DE TU CONCIERTO FAVORITO</h2>
+    <p class="parr_cont">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste voluptates ipsam,
+      quaerat quisquam illum numquam, nemo ducimus asperiores eligendi suscipit sapiente
+      neque tempore odio quibusdam voluptas quam quidem eum officia.
+    </p>
+  </div>
+
+   <div class="nav-bar">
+    <img src="src/img/billie.webp" class="imgzoom"
+         data-video="https://www.youtube.com/watch?v=V9PVRfjEBTI&list=RDV9PVRfjEBTI&start_radio=1"
+         data-artist="Billie Eilish"
+         data-song="Bad Guy"
+         alt="Billie Eilish">
+    <img
+      src="src/img/bts.jpeg"
+      class="imgzoom video-trigger"
+      data-video="https://www.youtube.com/embed/VIDEO_ID_BTS?autoplay=1"
+      alt="BTS"
+    />
+    <img
+      src="src/img/ladygaga.jpg"
+      class="imgzoom video-trigger"
+      data-video="https://www.youtube.com/embed/VIDEO_ID_LADY?autoplay=1"
+      alt="Lady Gaga"
+    ><a>
+    <data-video="https://www.youtube.com/watch?v=oBofuVYDoG4&list=RDoBofuVYDoG4&start_radio=1" img
+      src="src/img/Shakira.webp"
+      class="imgzoom video-trigger"
+      alt="Shakira"
+    ><a>
+  </div>
+
+  <div class="modal-video" id="modal-video">
+    <div class="modal-content">
+      <button class="close-btn">&times;</button>
+      <iframe
+        id="video-iframe"
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
     </div>
-    <div class="nav-bar">
-        <a href=""><img src="src/img/billie.webp" class="imgzoom"></a>
-        <div id="cnt- cover-video">
-            <div id="cnt-video">
-            <video src="css/video.mp4" controls load id="video"></video>
+  </div>
 
-        </div>
-        <img src="src/img/bts.jpeg" class="imgzoom">
-    <div id="cnt- cover-video">
-    <div id="cnt-video">
-        <video src="css/video.mp4" controls load id="video"></video>
-        <div>
-        <img src="src/img/ladygaga.jpg" class="imgzoom">
-        <img src="src/img/Shakira.webp" class="imgzoom">
-    </div>
+  <footer>
+    © 2025 CO‑MUSICA. Todos los derechos reservados.<br />
+    Página hecha por A.Miranda - J.Pallo - S. Pullutagsi
+  </footer>
 
-    <div class="modal-video" id="modal-video">
-        
-    </div>
-
-    <footer style="text-align: center; padding: 20px; background-color: #222; color: white; margin-top: 900px;">
-        © 2025 CO-MUSICA. Todos los derechos reservados.<br>
-        Pagina hecha por A.Miranda - J.Pallo - S. Pullutagsi
-    </footer>
-
-    <script src="../src/public/javascript/informacion.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("modal-video");
+      const iframe = document.getElementById("video-iframe");
+      const closeBtn = document.querySelector(".close-btn");
+      document.querySelectorAll(".video-trigger").forEach((img) => {
+        img.addEventListener("click", () => {
+          iframe.src = img.dataset.video;
+          modal.style.display = "flex";
+        });
+      });
+      closeBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+      function closeModal() {
+        iframe.src = "";
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
